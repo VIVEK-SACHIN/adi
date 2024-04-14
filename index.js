@@ -41,16 +41,21 @@ function fetchWeather(cityName) {
     getWeatherByCity(cityName, apiKey)
         .then(weatherData => {
             if(weatherData.cod==200){
-            document.getElementById("temp").value=Math.floor((weatherData.main.temp-273));
-            document.getElementById("temp_max").value=Math.floor((weatherData.main.temp_max-273));
-            document.getElementById("temp_min").value=Math.floor((weatherData.main.temp_min-273));
-            document.getElementById("humidity").value=(weatherData.main.humidity);
-            document.getElementById("pressure").value=(weatherData.main.pressure);
-            document.getElementById("sea_level").value=weatherData.main.sea_level;
-            document.getElementById("grnd_level").value=weatherData.main.grnd_level;
-            document.getElementById("feels_like").value=Math.floor((weatherData.main.feels_like-273));
+            console.log(weatherData);
+            let iconurl = "http://openweathermap.org/img/w/" + weatherData.weather[0].icon + ".png";
+            
+            document.getElementById("temp").innerHTML=Math.floor((weatherData.main.temp-273))+"<sup>o</sup>"+"C";
+            document.getElementById('wicon').setAttribute('src', iconurl);
+            // document.getElementById("temp_max").value=Math.floor((weatherData.main.temp_max-273));
+            // document.getElementById("temp_min").value=Math.floor((weatherData.main.temp_min-273));
+            // document.getElementById("humidity").value=(weatherData.main.humidity);
+            // document.getElementById("pressure").value=(weatherData.main.pressure);
+            // document.getElementById("sea_level").value=weatherData.main.sea_level;
+            // document.getElementById("grnd_level").value=weatherData.main.grnd_level;
+            // document.getElementById("feels_like").value=Math.floor((weatherData.main.feels_like-273));
             document.getElementById("information").style.display="inline";
             document.getElementById("buttonandname").style.display="none";
+            
             }
             
             //  agar aur kuch karna ho to kar liyo yahan data ke saath
@@ -64,3 +69,5 @@ document.getElementById("ok").addEventListener("click",()=>{
     document.getElementById("information").style.display="none";
     document.getElementById("buttonandname").style.display="flex";
 })
+//Pressure: The unit of pressure is typically provided in hectopascals (hPa) or millibars (mb). In the data you provided, the pressure is given in hPa.
+//Humidity: The unit of humidity is percentage (%). It represents the amount of water vapor present in the air relative to the maximum amount of water vapor the air can hold at that temperature.
