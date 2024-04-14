@@ -5,37 +5,39 @@
 	<link rel="stylesheet" type="text/css" href="index.css">
     
 </head>
-<body>
+<body background="R.jpg">
 	<div class="container">
 		<h1>Location Search</h1>
-		<div class="search-container">
+		<div id="buttonandname" class="search-container">
 			<input type="text" class="city-input" id="city-text" placeholder="Enter city name">
 			<button id="Search" class="search-button">Search</button>
 		</div>
-        <div>
+        <div id="information">
             <label for="feels_like">Feels Like:</label>
             <input type="text" id="feels_like" readonly >
-
+            <br>
             <label for="grnd_level">Ground Level:</label>
             <input type="text" id="grnd_level" readonly >
-
+            <br>
             <label for="temp_min">minimun temperature</label>
             <input type="text" id="temp_min" readonly >
-
+            <br>
             <label for="temp_max">Maximum temoerature </label>
             <input type="text" id="temp_max" readonly >
-
+            <br>
             <label for="humidity">humidity</label>
             <input type="text" id="humidity" readonly >
-
+            <br>
             <label for="pressure">pressure:</label>
             <input type="text" id="pressure" readonly >
-
+            <br>
             <label for="temp">temperature:</label>
             <input type="text" id="temp" readonly >
-
+            <br>
             <label for="sea_level">Sea Level:</label>
             <input type="text" id="sea_level" readonly >
+            <br>
+            <button id="ok">Ok</button>
             
         </div>
 	</div>

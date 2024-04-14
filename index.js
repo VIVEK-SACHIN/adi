@@ -49,6 +49,8 @@ function fetchWeather(cityName) {
             document.getElementById("sea_level").value=weatherData.main.sea_level;
             document.getElementById("grnd_level").value=weatherData.main.grnd_level;
             document.getElementById("feels_like").value=Math.floor((weatherData.main.feels_like-273));
+            document.getElementById("information").style.display="inline";
+            document.getElementById("buttonandname").style.display="none";
             }
             
             //  agar aur kuch karna ho to kar liyo yahan data ke saath
@@ -58,3 +60,7 @@ function fetchWeather(cityName) {
             // waise error aayega nahin aayega to wo waha try catch main handle ho jayega fir bhi dal diya hai acha impression padega
         });
 }
+document.getElementById("ok").addEventListener("click",()=>{
+    document.getElementById("information").style.display="none";
+    document.getElementById("buttonandname").style.display="flex";
+})
