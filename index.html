@@ -7,7 +7,7 @@
 </head>
 <body background="R.jpg">
 	<div class="container">
-		<h1>Location Search</h1>
+		<h1 id="heading">Location Search</h1>
 		<div id="buttonandname" class="search-container">
 			<input type="text" class="city-input" id="city-text" placeholder="Enter city name">
 			<button id="Search" class="search-button">Search</button>
@@ -39,10 +39,37 @@
             <br>
             <button id="ok">Ok</button> -->
             
-            <img id="wicon" src="" alt="Weather icon" width="90px">
+            <img  id="wicon" src="" alt="Weather icon"  >
             <h1 id="temp"></h1>
-            <button id="ok">Ok</button> 
+             <div id="tempAndPressure">       <div >
+                <img src="humidity.jpg" alt="" >
+                <div style="color: white;">
+                    <span id="humidity"></span>
+                    <br>
+                    humidity
+                </div>
+            </div>
+            <div>
+                <img src="pressure.jpg" alt="" >
+                <div style="color: white;">
+                    <span id="pressure"></span>
+                    <br>
+                    pressure
+                </div>
+            </div>
+            <div>
+                <img src="windspeed.jpg" alt="" >
+                <div style="color: white;">
+                    <span id="windspeed"></span>
+                    <br>
+                    windspeed
+                </div>
+            </div>
+           
         </div>
+        <button id="ok">Ok</button> 
+    </div>
+        
 	</div>
     <script  src="index.js"></script>
 </body>
