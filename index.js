@@ -50,13 +50,13 @@ function fetchWeather(cityName) {
             // document.getElementById("temp_min").value=Math.floor((weatherData.main.temp_min-273));
             document.getElementById("humidity").innerHTML=(weatherData.main.humidity)+"%";
             document.getElementById("pressure").innerHTML=(weatherData.main.pressure);
-            document.getElementById("windspeed").innerHTML=weatherData.wind.speed;
+            document.getElementById("windspeed").innerHTML=weatherData.wind.speed+"km/ph";
             // document.getElementById("sea_level").value=weatherData.main.sea_level;
             // document.getElementById("grnd_level").value=weatherData.main.grnd_level;
             // document.getElementById("feels_like").value=Math.floor((weatherData.main.feels_like-273));
             document.getElementById("information").style.display="flex";
             document.getElementById("buttonandname").style.display="none";
-            document.getElementById("heading").innerHTML=weatherData.name+"km/ph";
+            document.getElementById("heading").innerHTML=weatherData.name;
             }
             
             //  agar aur kuch karna ho to kar liyo yahan data ke saath
